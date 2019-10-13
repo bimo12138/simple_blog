@@ -17,5 +17,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', include("AdminSite.urls")),
+    path("", include("IndexSite.urls"))
 ]
