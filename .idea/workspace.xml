@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc72935-074d-44cb-b0e2-1962df5eeb9c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/AdminSite/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdminSite/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IndexSite/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IndexSite/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_blog/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,12 +16,12 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simple_blog/urls.py">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="272">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -37,11 +32,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,6 +50,7 @@
         <option value="$PROJECT_DIR$/AdminSite/urls.py" />
         <option value="$PROJECT_DIR$/IndexSite/urls.py" />
         <option value="$PROJECT_DIR$/simple_blog/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -64,8 +64,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1974" />
-    <option name="y" value="-13" />
+    <option name="x" value="1937" />
+    <option name="y" value="-20" />
     <option name="width" value="1735" />
     <option name="height" value="1059" />
   </component>
@@ -88,17 +88,7 @@
             <path>
               <item name="simple_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminSite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="IndexSite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -107,10 +97,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.gitosc" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -173,22 +164,37 @@
       <option name="project" value="LOCAL" />
       <updated>1570977612423</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial BaseSite">
+      <created>1570978450497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570978450497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@simple_blog" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.31666666" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.31666666" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32916668" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32916668" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22790202" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -197,6 +203,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="manage.py@simple_blog" order="8" weight="0.32916668" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -239,7 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
     <MESSAGE value="Initial README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial README" />
+    <MESSAGE value="Initial BaseSite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial BaseSite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,6 +292,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
