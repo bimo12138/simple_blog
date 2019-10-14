@@ -4,3 +4,11 @@
 @ide:         PyCharm
 @name:        urls.py
 """
+from . import views
+from django.urls import path
+
+app_name = "index"
+
+urlpatterns = [
+    path("", views.IndexHandler.as_view(), name="index")
+]

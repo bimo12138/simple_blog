@@ -4,3 +4,7 @@
 @ide:         PyCharm
 @name:        urls.py
 """
+
+urlpatterns = [
+    
+]
