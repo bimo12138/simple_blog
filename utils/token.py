@@ -6,8 +6,8 @@
 """
 import time
 import jwt
-import base64
-secret = "gvfsdhgdsgdfsfgfrghfgsgdfa"
+
+secret = "secret"
 
 
 class Token(object):
@@ -21,8 +21,17 @@ class Token(object):
         payload = {
             # 没有这个域名哦!
             "iss": "bimo.com",
-            "exp": int(time.time()),
+            "exp": int(time.time()) + 3600,
+            "iat": int(time.time()),
             "name": username,
             "admin": False
         }
-        return jwt.encode(payload=payload, key="secret", alg="HS256", al=header)
+        return jwt.encode(payload, secret, algorithm='HS256')
+
+    @classmethod
+    def get_available_message(cls, token):
+        try:
+            jwt.decode(token, secret, issuer="bimo.com", algorithms=['HS256'])
+            return True
+        except jwt.exceptions.ExpiredSignatureError:
+            return False
