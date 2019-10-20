@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc72935-074d-44cb-b0e2-1962df5eeb9c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IndexSite/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/IndexSite/models.py" afterDir="false" />
     </list>
@@ -30,8 +29,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IndexSite/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="491">
+              <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -287,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571551286480</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Make User Model Manager">
+      <created>1571583731770</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571583731770</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -393,7 +399,8 @@
     <MESSAGE value="Initial token" />
     <MESSAGE value="Initial Index Page" />
     <MESSAGE value="Initial User Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial User Model" />
+    <MESSAGE value="Make User Model Manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make User Model Manager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -773,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IndexSite/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="491">
+          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
