@@ -32,3 +32,63 @@ a {
 .panel-body button {
     margin: 5px;
 }
+
+
+/**************************** modal **********************************/
+
+.my-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.my-modal-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 600px;
+    min-height: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 150px auto;
+    animation: fade_in 0.6s;
+    padding: 1.2em;
+}
+
+.my-modal-header {
+    min-height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.my-modal-body {
+    box-sizing: border-box;
+    min-height: 300px;
+}
+
+.my-modal-footer {
+    box-sizing: border-box;
+    border-top: 1px solid gray;
+    min-height: 50px;
+}
+
+#close-btn {
+    cursor: pointer;
+}
+@keyframes fade_in {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+

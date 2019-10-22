@@ -10,5 +10,6 @@ from django.urls import path
 app_name = "index"
 
 urlpatterns = [
-    path("", views.IndexHandler.as_view(), name="index")
+    path("", views.IndexHandler.as_view(), name="index"),
+    path("login/", views.LoginView.as_view(), name="login")
 ]

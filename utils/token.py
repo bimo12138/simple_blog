@@ -31,7 +31,7 @@ class Token(object):
     @classmethod
     def get_available_message(cls, token):
         try:
-            jwt.decode(token, secret, issuer="bimo.com", algorithms=['HS256'])
-            return True
+            message = jwt.decode(token, secret, issuer="bimo.com", algorithms=['HS256'])
+            return [True, message]
         except jwt.exceptions.ExpiredSignatureError:
             return False

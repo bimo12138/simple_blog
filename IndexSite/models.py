@@ -20,7 +20,7 @@ class AuthManger(BaseUserManager):
         user.is_admin = False
         user.save()
 
-    def create_super_user(self, username, password, email):
+    def create_superuser(self, username, password, email):
         user = self.base_function(username=username, password=password, email=email)
         user.is_admin = True
         user.save()
@@ -37,8 +37,9 @@ class Auth(AbstractBaseUser):
     auth_icon = models.ImageField(verbose_name="用户头像", upload_to="img/", default="img/user.png")
     is_active = models.BooleanField(verbose_name="激活状态", default=False)
     is_admin = models.BooleanField(verbose_name="是否是管理员用户")
+
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["username", "email"]
+    REQUIRED_FIELDS = ["username"]
     EMAIL_FIELD = "email"
 
     objects = AuthManger()
@@ -56,3 +57,10 @@ class Auth(AbstractBaseUser):
 
     def __str__(self):
         return self.email
+
+    class Meta:
+        db_table = "Auth"
+        get_latest_by = "-register_time"
+        ordering = ["-register_time", "-last_login"]
+        verbose_name = "用户"
+        verbose_name_plural = "用户"

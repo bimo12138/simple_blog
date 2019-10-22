@@ -93,7 +93,25 @@
 
     </aside>
 
+    <div class="my-modal">
+        <div class="my-modal-content">
+            <div class="my-modal-header">
+                <h3>测试modal</h3>
+                <i class="glyphicon glyphicon-remove" id="close-btn"></i>
+            </div>
+            <div class="my-modal-body">
+
+            </div>
+            <div class="my-modal-footer">
+
+            </div>
+        </div>
+    </div>
+
     <script>
+        Vue.component("modal-model", {
+
+        });
         let header = new Vue({
             el: "#header",
             data: {
@@ -108,7 +126,31 @@
                 banner_loading: false
             },
             created() {
-
+                let token = this.get_token();
+                if (token) {
+                    axios.get("/login/", {
+                        params: {
+                            token: token
+                        }
+                    })
+                    .then(response => {
+                        console.log(response);
+                    })
+                }
+            },
+            methods: {
+                get_token() {
+                    let token;
+                    let value = document.cookie.split(";");
+                    for (let i = 0; i < value.length; i++) {
+                        let message = value[i].split("=");
+                        if (message[0] === "token") {
+                            token = message[1];
+                            return token;
+                        }
+                    }
+                    return false;
+                }
             }
         });
     </script>
