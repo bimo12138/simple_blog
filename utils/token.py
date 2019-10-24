@@ -34,4 +34,4 @@ class Token(object):
             message = jwt.decode(token, secret, issuer="bimo.com", algorithms=['HS256'])
             return [True, message]
         except jwt.exceptions.ExpiredSignatureError:
-            return False
+            return [False, "Token 已经过期了，请重新登陆！"]

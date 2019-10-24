@@ -33,7 +33,13 @@ a {
     margin: 5px;
 }
 
-
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-top: 7.5px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
 /**************************** modal **********************************/
 
 .my-modal {
@@ -72,8 +78,17 @@ a {
 .my-modal-body {
     box-sizing: border-box;
     min-height: 300px;
+    padding: 1.2em;
 }
 
+.error_container {
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 15px;
+    line-height: 2em;
+    font-size: 1.2em;
+    animation: fade_in 0.6s;
+}
 .my-modal-footer {
     box-sizing: border-box;
     border-top: 1px solid gray;
@@ -92,3 +107,70 @@ a {
     }
 }
 
+.footer-button-group {
+    margin-top: 10px;
+    float: right;
+}
+
+.base_btn {
+    margin-right: 10px;
+}
+
+/************************ 下拉菜单 *******************************/
+.drop-box {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background: #333;
+    min-width: 5em;
+    z-index: 20;
+    font-size: 1.3em;
+    border: 2px solid #333;
+    text-align: center;
+    min-height: 2em;
+    left: -15px;
+}
+.drop-content a {
+    display: block;
+    color: white;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.drop-content a:hover {
+    background: white;
+    color: #333;
+    animation: hover_in 0.3s;
+}
+
+@keyframes hover_in {
+    from {
+        background: #333;
+        color: white;
+    }
+    to {
+        background: white;
+        color: #333;
+    }
+}
+.drop-box:hover .drop-content {
+    display: block;
+    animation: fade_v_in 0.3s;
+}
+
+@keyframes fade_v_in {
+    from {
+        transform: translateY(-100px);
+        z-index: 0;
+    }
+    to {
+        transform: translateY(0px);
+        z-index: 8;
+    }
+}

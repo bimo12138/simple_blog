@@ -4,7 +4,9 @@
 @ide:         PyCharm
 @name:        urls.py
 """
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    
+    path("", views.IndexHandler.as_view(), name="index"),
 ]
