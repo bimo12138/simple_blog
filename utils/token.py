@@ -21,7 +21,7 @@ class Token(object):
         payload = {
             # 没有这个域名哦!
             "iss": "bimo.com",
-            "exp": int(time.time()) + 3600,
+            "exp": int(time.time()) + 3600 * 3,
             "iat": int(time.time()),
             "name": username,
             "admin": False

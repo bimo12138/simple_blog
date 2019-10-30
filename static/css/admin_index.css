@@ -1,0 +1,17 @@
+aside {
+
+}
+.my-item {
+    background: gray;
+}
+.my-item:hover {
+    background: white;
+    color: gray;
+}
+.my-item-active {
+    background: white;
+    color: gray;
+}
+#content {
+    background: #e3e3e3;
+}

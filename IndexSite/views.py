@@ -45,6 +45,8 @@ class LoginView(View):
                         available_token = available_token.decode()
 
                     return JsonResponse(status=200, data={"message": "登陆成功！", "token": str(available_token)})
+                else:
+                    return JsonResponse(status=403, data={"message": "密码错误"})
             else:
                 return JsonResponse(status=403, data={"message": "当前用户不存在！"})
         else:
