@@ -47,7 +47,10 @@ class Auth(AbstractBaseUser):
     def get_full_name(self):
         return {
             "id": self.identify,
-            "email": self.email
+            "username": self.username,
+            "email": self.email,
+            "register_time": self.register_time,
+            "last_login": self.last_login
         }
 
     def get_short_name(self):

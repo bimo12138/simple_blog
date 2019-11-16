@@ -25,9 +25,9 @@ class IndexHandler(View):
 class ModelHandler(View):
 
     def get(self, request):
-        token = request.GET.get("token")
+        login_status = token.get_available_message(request.COOKIES.get("token"))
         model_data = {}
-        if token:
+        if login_status:
             models = apps.get_models()
             lists = {}
             for model in models:
@@ -39,3 +39,31 @@ class ModelHandler(View):
             return JsonResponse(status=200, data={"model_data": model_data})
         else:
             return JsonResponse(status=401, data={"status": False, "message": "token 已过期，请重新登陆"})
+
+
+class ModelProcessHandler(View):
+
+    def get(self, request, model_name):
+        login_status = token.get_available_message(request.COOKIES.get("token"))
+        if login_status:
+            models = apps.get_models()
+            for model in models:
+                columns = {}
+                if model._meta.verbose_name == model_name:
+                    num = 0
+                    for column in model._meta.fields:
+                        columns[num] = column.verbose_name
+                        num += 1
+                    result = model.objects.all()
+
+                    if result.exists():
+                        database = []
+                        for i in result:
+                            di = i.__getstate__()
+                            database.append(di)
+
+                        print(type(columns), type(database))
+                        return JsonResponse(status=200, data={"columns": columns, "result": database})
+                    else:
+                        return JsonResponse(status=404, data={"columns": columns, "result": False})
+        return JsonResponse(status=401, data={"status": False, "message": "token 已过期，请重新登陆"})

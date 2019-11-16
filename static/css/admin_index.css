@@ -15,3 +15,15 @@ aside {
 #content {
     background: #e3e3e3;
 }
+
+.card {
+    border: 1px solid black;
+    background: #337ab7;
+}
+.card-body {
+    color: white;
+    font-size: 2em;
+}
+.card strong, .card small {
+
+}
