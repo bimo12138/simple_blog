@@ -38,4 +38,9 @@ class MyModelUtils(object):
     def get_message(self, name, model_name):
         for model in self.models:
             if model._meta.app_label == name and model._meta.verbose_name == model_name:
-                return model.objects.all()
+                return [message.get_full_name() for message in model.objects.all()]
+
+    def get_banner(self):
+        return [[app, self.get_model(app)] for app in self.installed_app]
+
+

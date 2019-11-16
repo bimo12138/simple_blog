@@ -2,16 +2,18 @@ aside {
 
 }
 .my-item {
-    background: gray;
+    background: #080808;
+    color: white;
 }
 .my-item:hover {
     background: white;
-    color: gray;
+    color: #080808;
 }
 .my-item-active {
     background: white;
-    color: gray;
+    color: #080808;
 }
+
 #content {
     background: #e3e3e3;
 }
@@ -26,4 +28,18 @@ aside {
 }
 .card strong, .card small {
 
+}
+
+.list-group {
+    text-align: center;
+}
+
+.my-item-child {
+    margin-left: 2em;
+    border: none;
+}
+.error-item {
+    border: none;
+    background: #005513;
+    color: white;
 }

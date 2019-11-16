@@ -44,6 +44,9 @@ class Auth(AbstractBaseUser):
 
     objects = AuthManger()
 
+    def get_full_label(self):
+        return ["id", "username", "email", "register", "last_login"]
+
     def get_full_name(self):
         return {
             "id": self.identify,
